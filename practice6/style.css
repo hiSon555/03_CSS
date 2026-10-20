@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Open sans", sans-serif;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8fafc;
+}
+
+.list-container {
+    width: 100%;
+    max-width: 1100px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    overflow: hidden;
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 24px 30px;
+}
+
+.header-title h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.device-count {
+    font-size: 14px;
+    color: #64748b;
+}
+
+.btn-add {
+    border: none;
+    border-radius: 8px;
+    background-color: #3b82f6;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.btn-add:hover {
+    background-color: #2563eb;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse
+    /* 테이블 태그의 특성으로 각 셀 사이의 여백이 존재    */
+}
+
+.data-table th {
+    border-bottom: 1px solid #e2e8f0;
+    padding: 16px 30px;
+    /* th 태그는 기본적으로 text-align: center를 갖고 있음 */
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+    color: #64748b;
+    background-color: #f8fafc;
+}
+
+.icon-box {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+}
+
+.device-info {
+    /* 테이블을 이루고 있는 td에 display: flex를 직접적으로 줄 수 없음
+       그럴 경우, 우리가 알고 있는 '셀'로써의 특성을 잃게 됨
+       => td가 안 되니, td의 자식으로 div를 더 넣으면 되겠구나!
+    */
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.icon-light { background-color: #fef08a; }
+.icon-thermostat { background-color: #fde7aa; }
+.icon-plug { background-color: #e2e8f0; }
+.icon-camera { background-color: #bae6fd; }
+
+.device-name {
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.location {
+    color: #64748b;
+}
+
+.status-badge {
+    display: inline-flex;
+    /*
+        flex는 자식들의 배치를 내 마음대로 하겠다 = flex를 이용하겠다이지만,
+        부모 자체는 block로 동작됨 => block라는 말은 크기를 갖는다
+
+        block요소의 반대 => inline요소 => inline 요소라는 말은 크기를 갖지 않는다
+                                        (width나 height가 없이, 내부에 들어가는 글자 등의 크기로 결정)
+
+        이 badge는 자식의 위치 배치도 해야 되고, 스스로 크기를 갖지 않아야 됨
+    */
+    align-items: center;
+    gap: 8px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.status-dot { width: 8px; height: 8px; border-radius: 50%}
+
+.badge-online { background-color: #dcfce7; color: #166534; }
+.badge-online .status-dot { background-color: #22c55e; }
+.badge-offline { background-color: #fee2e2; color: #991b1b; }
+.badge-offline .status-dot { background-color: #ef4444; }
+.badge-standby { background-color: #fff7c3; color: #854d0e; }
+.badge-standby .status-dot { background-color: #e7b30c }
+
+.battery-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.battery-bar {
+    width: 80px;
+    height: 8px;
+    background-color: #e2e8f0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.battery-fill {
+    height: 100%;
+    background-color: #10b981;
+    border-radius: 4px;
+}
+
+ .battery-fillbad {
+    height: 100%;
+    background-color: #f04447;
+    border-radius: 4px;
+}
+
+.battery-text {
+    font-size: 14px;
+    color: #64748b;
+    width: 35px;
+}
+
+.btn-edit {
+    padding: 8px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    color: #475569;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: transparent; /* 투명 */
+}
+
+.btn-edit:hover {
+    border-color: #94a3b8;
+    background-color: #f1f5f9;
+}
+
+.battery-pluggedin {
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 600;
+    color: #94a3b8;
+}
+
+tr td  {
+    border-bottom: 1px solid #e2e8f0;
+    padding: 20px 30px ;
+}
