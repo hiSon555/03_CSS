@@ -1,0 +1,87 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #7f4aa8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
+
+.card {
+    background-color: white;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.container {
+    background-color: black;
+    width: 90%;
+    max-width: 1200px;
+    height: 90dvh;
+    border-radius: 32px;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 10px);
+    gap: 20px;
+}
+
+.introduction {
+    display: flex;
+    justify-content: space-between;
+    flex: 2;
+    padding: 30px;
+}
+
+.reviews {
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+}
+
+.best {
+    background-color: #fffe03;
+    font-size: 10px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+
+.introduction > span {
+    font-size: 96px;
+    font-weight: 900;
+    text-align: center;
+    flex: 2 1 0;
+}
+
+.introduction-text {
+    border-top: 3px solid;
+    padding-top: 10px;
+    font-size: 24px;
+}
+
+.introduction-image {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex: 1 1 0;
+}
+
+.introduction-image > img {
+    flex: 1;
+    object-fit: cover;
+    border-radius: 16px;
+    height: 100%;
+    width: 0;
+}
