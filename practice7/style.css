@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    min-height: 100dvh;
+    background-color: #f3f4f6;
+    color: #1f2937;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    background-color: #111827;
+    color: white;
+}
+
+.logo {
+    height: 80px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #374151;
+    gap: 10px;
+}
+
+.brand-icon {
+    font-size: 24px;
+    color: #3b82f6;
+}
+
+.logo span {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 16px 30px;
+    color: #9ca3af;
+    font-size: 15px;
+    transition: 0.5s;
+}
+
+nav ul li.active,
+nav ul li:hover {
+    background-color: #1f2937;
+    color: white;
+}
+
+nav ul li.active {
+    border-left: 4px solid #3b82f6;
+    color: #3b82f6;
+}
+
+main {
+    flex: 1;
+}
+
+header {
+    height: 80px;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 0 40px;
+}
+
+.header-text h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 5px;
+}
+
+.header-text span {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.user-shortcut {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #6b7280;     /* 글자와 관련 있는 속성은 자식에게까지 전파됨 */
+    font-size: 18px;
+}
+
+.user-avatar-small {
+    color: #2563eb;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dbeafe;
+    font-weight: 500;
+}
+
+.content-wrapper {
+    width: 100%;
+    height: calc(100% - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.content-main {
+    width: 100%;
+    max-width: 800px; /* 카드 폼 맥스 좀 넣자 */
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    border-radius: 24px;
+    padding: 40px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.data {
+    gap: 10px;
+    align-items: center;
+    padding: 30px;
+    justify-self: left;
+}
+
+.profile {
+    border-radius: 50%;
+    background-color: #dce9ff ;
+    height: 90px;
+    width: 90px;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.upload {
+    color: white;
+    background-color: #3b82f6;
+    border-radius: 14px;
+    height: 40px;
+    font-size: 14px;
+    border: 1px solid #3b82f6;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.remove {
+    color: #64748b;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    font-size: 14px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #64748b;
+    font-size: 12px;
+    margin: 40px;
+}
+
+.full-name {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 30px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.input-default input {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    outline: none;
+    padding: 10px 5px;
+}
+
+.first-name {
+    width: calc((100% - 10px) /2);
+}
+
+.last-name {
+    width: calc((100% - 10px) /2);
+}
+
+.subscribe {
+    gap: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.confirm-dialog {
+    justify-content: right;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    gap: 10px;
+    padding: 7px 16px;
+    /*background-color: transparent;*/
+    /*appearance: none;*/
+    /*box-shadow: none;*/
+}
+
+.input-default input:focus {
+    outline: none;
+    border-color: #2563eb;
+}
