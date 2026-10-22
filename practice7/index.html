@@ -78,13 +78,22 @@
                         <input type="tel" id="phoneNumber" class="data-input" placeholder="010-1234-5678">
                     </div>
                     <div class="flex-row subscribe">
-                        <input type="checkbox">
-                        <span>Receive updates and newsletters via email</span>
+                        <!--
+                            checkbox를 사용하되, 그 모양을 보여주고 싶지 않다면?
+                            checkbox에게 display: none을 부여함
+                        -->
+                        <label class="flex-row select">
+                            <input type="checkbox" class="hidden-checkbox" />
+                            <div class="checkbox-box">
+                                <div class="checkmark-icon"></div>
+                            </div>
+                            Receive updates and newsletters via email
+                        </label>
                     </div>
                 </div>
                 <div class="flex-row confirm-dialog">
-                    <button class="cancel-btn">Cancel</button>
-                    <button class="save-btn">Save Changes</button>
+                    <button class="btn cancel-btn remove">Cancel</button>
+                    <button class="btn save-btn upload">Save Changes</button>
                 </div>
             </div>
         </div>

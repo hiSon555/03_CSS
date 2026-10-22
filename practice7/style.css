@@ -180,6 +180,7 @@ header {
     border: 1px solid #e2e8f0;
     border-radius: 14px;
     font-size: 14px;
+    height: 40px;
 }
 
 .user-info {
@@ -221,6 +222,8 @@ header {
 
 .confirm-dialog {
     justify-content: right;
+    gap: 15px;
+    padding-top: 30px;
 }
 
 .btn {
@@ -238,4 +241,39 @@ header {
 .input-default input:focus {
     outline: none;
     border-color: #2563eb;
+}
+
+.hidden-checkbox {
+    display: none;
+}
+
+.checkbox-box {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #d1d5db;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding-bottom: 4px;
+    margin-right: 10px;
+}
+
+.checkmark-icon {
+    width: 6px;
+    height: 10px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(45deg);
+}
+
+/* 선택자를 + 로 연결한 건 형제 선택자*/
+.hidden-checkbox:checked + .checkbox-box {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+}
+
+.select {
+    user-select: none;
 }
